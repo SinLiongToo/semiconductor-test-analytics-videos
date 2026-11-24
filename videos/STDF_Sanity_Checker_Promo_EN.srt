@@ -1,0 +1,400 @@
+1
+00:00:04,150 --> 00:00:07,130
+Every test program release, every new product,
+
+2
+00:00:07,150 --> 00:00:10,442
+every stage consolidation comes down to one question:
+
+3
+00:00:10,462 --> 00:00:12,088
+did anything change that shouldn't have?
+
+4
+00:00:12,930 --> 00:00:17,123
+Answering it usually means hours of manual comparison across limits,
+
+5
+00:00:17,143 --> 00:00:21,105
+bins, and yield. Slow, tedious, and prone to error.
+
+6
+00:00:23,083 --> 00:00:27,895
+Semiconductor STDF Sanity Checker automates the entire OLD versus NEW
+
+7
+00:00:27,908 --> 00:00:31,145
+verification workflow, in one desktop application.
+
+8
+00:00:31,994 --> 00:00:36,324
+Step one: load the two datasets. Native binary STDF,
+
+9
+00:00:36,344 --> 00:00:40,424
+Spotfire exports, and compressed cache files are all supported,
+
+10
+00:00:40,444 --> 00:00:43,144
+and a cached dataset reloads in under a second.
+
+11
+00:00:44,003 --> 00:00:47,690
+Step two: nine analysis features, each one click away.
+
+12
+00:00:49,716 --> 00:00:53,646
+Feature one compares every test item between the two programs.
+
+13
+00:00:53,666 --> 00:00:55,979
+In this demo, eight parameters are checked.
+
+14
+00:00:56,838 --> 00:00:59,730
+Each test is classified: number change,
+
+15
+00:00:59,750 --> 00:01:02,618
+name change, limit change, unit change,
+
+16
+00:01:02,638 --> 00:01:07,113
+added, or removed. Here, Bias changed its unit from microamps to
+
+17
+00:01:07,126 --> 00:01:10,126
+nanoamps, and its limits were rescaled to match.
+
+18
+00:01:10,982 --> 00:01:13,883
+The full result is exported as a CSV report.
+
+19
+00:01:15,904 --> 00:01:18,416
+Feature two compares bin states, die by die.
+
+20
+00:01:19,270 --> 00:01:21,901
+One hundred ninety-seven dies are aligned.
+
+21
+00:01:21,920 --> 00:01:25,933
+Six switched state, and yield moved from ninety-two point four to
+
+22
+00:01:25,946 --> 00:01:27,458
+eighty-nine point three percent.
+
+23
+00:01:28,302 --> 00:01:31,557
+OLD and NEW wafer maps sit beside a switch map,
+
+24
+00:01:31,577 --> 00:01:34,582
+which marks every die that moved from pass to fail,
+
+25
+00:01:34,602 --> 00:01:35,152
+or back.
+
+26
+00:01:36,014 --> 00:01:40,114
+Below, the Pareto charts and the yield comparison show exactly which
+
+27
+00:01:40,127 --> 00:01:40,927
+bins changed.
+
+28
+00:01:42,902 --> 00:01:47,489
+Delta Sigma Analysis grades the statistical shift of every common test.
+
+29
+00:01:48,346 --> 00:01:51,676
+Each row shows delta sigma, sigma ratio,
+
+30
+00:01:51,696 --> 00:01:54,788
+CPK, and the change in distribution shape,
+
+31
+00:01:54,808 --> 00:01:57,921
+with an automatic verdict from no violation to full shift.
+
+32
+00:01:58,857 --> 00:02:02,899
+For Rst_V, the mean rises by ten millivolts,
+
+33
+00:02:02,919 --> 00:02:05,719
+and the distribution turns from normal to right-skewed.
+
+34
+00:02:06,578 --> 00:02:09,933
+The overlaid CDF shows the shift against the limits,
+
+35
+00:02:09,953 --> 00:02:10,703
+at a glance.
+
+36
+00:02:12,686 --> 00:02:16,278
+Aligned analysis matches every die by its ECID,
+
+37
+00:02:16,299 --> 00:02:18,211
+for a true die-to-die comparison.
+
+38
+00:02:19,066 --> 00:02:24,508
+In the S-plot, each point is one die: OLD value on the X axis,
+
+39
+00:02:24,528 --> 00:02:28,604
+NEW value on the Y axis, with Pearson correlation computed for every
+
+40
+00:02:28,616 --> 00:02:29,079
+test.
+
+41
+00:02:31,067 --> 00:02:35,134
+The repeatability analyzer takes dies that were tested many times:
+
+42
+00:02:35,154 --> 00:02:37,079
+fifty runs each, in this demo.
+
+43
+00:02:38,013 --> 00:02:40,993
+For every test, it reports mean, sigma,
+
+44
+00:02:41,013 --> 00:02:43,713
+equipment variation, CV, and Cp,
+
+45
+00:02:44,558 --> 00:02:47,338
+and it classifies each time series as stable,
+
+46
+00:02:47,358 --> 00:02:49,596
+drift, step shift, or cyclic.
+
+47
+00:02:51,628 --> 00:02:55,608
+Feature six evaluates proposed limits before they reach production:
+
+48
+00:02:55,628 --> 00:03:00,303
+load a limit file, and every die is re-binned and yield is recalculated.
+
+49
+00:03:01,163 --> 00:03:04,830
+The test summary lists limits, mean, CPK,
+
+50
+00:03:04,850 --> 00:03:06,700
+and fail rate for every parameter,
+
+51
+00:03:07,567 --> 00:03:10,809
+and four tabs explain each one. Tab one:
+
+52
+00:03:10,829 --> 00:03:13,342
+CDF, wafer map, and run chart.
+
+53
+00:03:14,211 --> 00:03:17,211
+Tab two overlays several parameters on one chart.
+
+54
+00:03:18,071 --> 00:03:21,488
+Tab three runs a site-to-site ANOVA. Here,
+
+55
+00:03:21,508 --> 00:03:23,383
+it confirms there is no site bias.
+
+56
+00:03:24,246 --> 00:03:28,246
+And tab four checks radial zones, from the wafer center to the edge.
+
+57
+00:03:30,223 --> 00:03:33,128
+The cross-table engine pivots any two dimensions,
+
+58
+00:03:33,148 --> 00:03:36,872
+such as lot, wafer, site, tester, or bin.
+
+59
+00:03:37,743 --> 00:03:42,443
+Here, OLD hard bin against NEW: one hundred seventy-six dies stayed in
+
+60
+00:03:42,456 --> 00:03:45,493
+pass, while six moved from pass to open-short.
+
+61
+00:03:46,367 --> 00:03:49,704
+The same matrix is a spreadsheet you can copy straight into Excel.
+
+62
+00:03:51,720 --> 00:03:57,595
+For automotive programs, the AEC-Q001 PAT screener works on passing dies
+
+63
+00:03:57,608 --> 00:03:57,945
+only.
+
+64
+00:03:58,794 --> 00:04:03,236
+Robust limits are computed from the median and IQR of each test.
+
+65
+00:04:03,257 --> 00:04:06,919
+For Rst_V, nineteen passing dies fall outside them.
+
+66
+00:04:07,766 --> 00:04:12,366
+The linked CDF, wafer map, and run chart show where those mavericks sit.
+
+67
+00:04:14,343 --> 00:04:18,918
+The drift analyzer compares pre- and post-stress data for every device.
+
+68
+00:04:19,774 --> 00:04:22,792
+Tests with drift failures are listed with their shift,
+
+69
+00:04:22,812 --> 00:04:24,649
+repeatability, and fail rate,
+
+70
+00:04:25,506 --> 00:04:29,286
+and the plots separate genuine device drift from tester offset,
+
+71
+00:04:29,306 --> 00:04:31,481
+using reference units as the baseline.
+
+72
+00:04:33,475 --> 00:04:38,080
+Beyond the core platform, three advanced toolkits extend the analysis.
+
+73
+00:04:38,100 --> 00:04:41,212
+First, the Wafer Spatial Pattern AI analyzer.
+
+74
+00:04:42,074 --> 00:04:46,079
+It folds every die into its position within the reticle shot.
+
+75
+00:04:46,099 --> 00:04:49,154
+One position fails eighty-nine percent of the time,
+
+76
+00:04:49,174 --> 00:04:50,999
+against a twenty-one percent baseline.
+
+77
+00:04:51,862 --> 00:04:55,587
+It is flagged as a critical repeater, with a Z-score of fourteen point
+
+78
+00:04:55,600 --> 00:04:58,062
+six: a mask or lens defect.
+
+79
+00:04:58,939 --> 00:05:01,082
+The pattern classifier scores edge-ring,
+
+80
+00:05:01,102 --> 00:05:03,907
+scratch, cluster, and other signatures,
+
+81
+00:05:03,927 --> 00:05:05,402
+and recommends a root cause.
+
+82
+00:05:07,374 --> 00:05:12,224
+The Automotive MPAT and GDBN screener is built for zero DPPM.
+
+83
+00:05:13,095 --> 00:05:17,700
+Multivariate PAT catches dies that pass every individual limit,
+
+84
+00:05:17,720 --> 00:05:20,920
+yet fall outside the correlation ellipse between parameters.
+
+85
+00:05:21,766 --> 00:05:25,941
+Good-die-in-bad-neighborhood analysis flags passing dies surrounded by
+
+86
+00:05:25,954 --> 00:05:28,929
+failures, and every die receives a risk tier.
+
+87
+00:05:30,898 --> 00:05:35,216
+The Dual-Group Drift Cross-Analyzer covers reliability qualification
+
+88
+00:05:35,236 --> 00:05:38,323
+across two test stations and up to eight readouts.
+
+89
+00:05:39,174 --> 00:05:42,024
+Each failing die is traced through every readout,
+
+90
+00:05:42,866 --> 00:05:46,929
+and a decision tree classifies it as true degradation or a suspected
+
+91
+00:05:46,941 --> 00:05:50,341
+test issue, with the mathematical proof shown for each verdict.
+
+92
+00:05:52,310 --> 00:05:56,773
+Every result is one click away from a CSV report or a sixteen-by-nine
+
+93
+00:05:56,785 --> 00:05:57,710
+PowerPoint deck.
+
+94
+00:05:58,583 --> 00:06:02,258
+The spatial and automotive toolkits also run headless from the command
+
+95
+00:06:02,270 --> 00:06:06,383
+line, exporting JSON and Excel for automated quality gates.
+
+96
+00:06:08,363 --> 00:06:12,218
+The result: faster NPI, safer program releases,
+
+97
+00:06:12,238 --> 00:06:14,325
+confident stage-elimination decisions,
+
+98
+00:06:15,186 --> 00:06:17,199
+and zero manual transcription errors.
+
+99
+00:06:19,195 --> 00:06:24,000
+Semiconductor STDF Sanity Checker. From hours of manual comparison,
+
+100
+00:06:24,020 --> 00:06:24,820
+to one click.
+

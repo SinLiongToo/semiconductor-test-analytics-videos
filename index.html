@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semiconductor Test Analytics Videos</title>
+<meta name="description" content="Product videos for STDF Sanity Checker and ECID Outlier Analyzer by Masa Tu (MIT AI Project Certification, 2026.1).">
+<meta property="og:title" content="Semiconductor Test Analytics Videos">
+<meta property="og:description" content="STDF Sanity Checker and ECID Outlier Analyzer: automated OLD vs NEW verification and single-die root-cause analytics.">
+<meta property="og:image" content="videos/poster_sanity.jpg">
+<style>
+  :root {
+    --bg: #071226; --bg2: #0c2448; --card: rgba(255,255,255,0.05); --line: rgba(64,196,255,0.35);
+    --text: #ffffff; --muted: #a8bed8; --dim: #6f86a8; --cyan: #40c4ff; --amber: #ffb74d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: var(--text); background: var(--bg);
+    background-image: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55; min-height: 100vh;
+  }
+  main { max-width: 1120px; margin: 0 auto; padding: 56px 24px 72px; }
+  .eyebrow { color: var(--cyan); letter-spacing: .22em; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+  h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.12; margin: 10px 0 14px; }
+  .rule { width: 120px; height: 4px; background: var(--amber); border-radius: 2px; margin: 18px 0; }
+  .lead { color: var(--muted); font-size: 18px; max-width: 760px; margin: 0; }
+  .author { color: var(--dim); font-size: 14px; margin-top: 14px; }
+  .author b { color: var(--text); font-weight: 600; }
+  .card {
+    margin-top: 44px; background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px; overflow: hidden;
+  }
+  .card h2 { margin: 4px 0 6px; font-size: clamp(22px, 3vw, 28px); }
+  .card p { color: var(--muted); margin: 0 0 18px; }
+  video { width: 100%; height: auto; display: block; border-radius: 12px; background: #000; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 14px; font-size: 14px; color: var(--dim); }
+  .meta a { color: var(--cyan); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+  .chips li { border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 13px; color: var(--muted); }
+  footer { margin-top: 56px; color: var(--dim); font-size: 13px; }
+  @media (max-width: 600px) {
+    main { padding: 36px 16px 56px; }
+    .card { padding: 16px; border-radius: 14px; }
+    .lead { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Product Engineering · Semiconductor Test Analytics</div>
+  <h1>Two tools, one goal:<br>find what changed, and why.</h1>
+  <div class="rule"></div>
+  <p class="lead">Product walkthroughs of two desktop tools for semiconductor test data:
+    automated OLD vs NEW verification of STDF data, and single-die root-cause analytics for returned parts.
+    All screens use each tool's built-in demo data.</p>
+  <p class="author">Created by <b>Masa Tu</b> · MIT AI Project Certification · 2026.1</p>
+
+  <section class="card" id="sanity-checker">
+    <div class="eyebrow">Video 1 · 6:31</div>
+    <h2>STDF Sanity Checker</h2>
+    <p>One-click OLD vs NEW verification for test program releases, NPI, and stage consolidation:
+      nine core analyses plus three advanced toolkits.</p>
+    <ul class="chips">
+      <li>Test item comparison</li><li>Bin switch &amp; wafer maps</li><li>Delta Sigma</li><li>Re-binning &amp; yield</li>
+      <li>AEC-Q001 PAT</li><li>Reliability drift</li><li>Spatial pattern AI</li><li>MPAT &amp; GDBN</li>
+    </ul>
+    <video controls preload="metadata" playsinline poster="videos/poster_sanity.jpg">
+      <source src="videos/STDF_Sanity_Checker_Promo_EN.mp4" type="video/mp4">
+      Your browser cannot play this video. <a href="videos/STDF_Sanity_Checker_Promo_EN.mp4">Download the MP4</a>.
+    </video>
+    <div class="meta">
+      <a href="videos/STDF_Sanity_Checker_Promo_EN.mp4" download>Download MP4</a>
+      <a href="videos/STDF_Sanity_Checker_Promo_EN.srt" download>Subtitles (SRT)</a>
+      <span>English narration · captions burned in</span>
+    </div>
+  </section>
+
+  <section class="card" id="ecid-outlier-analyzer">
+    <div class="eyebrow">Video 2 · 3:43</div>
+    <h2>ECID Outlier Analyzer</h2>
+    <p>A part comes back from the field. Was it an outlier all along? Seven detection engines examine a single die
+      against the full population, from 3σ statistics to machine learning and automotive MPAT &amp; GDBN.</p>
+    <ul class="chips">
+      <li>Univariate &amp; regression</li><li>Nearest-neighbor residual</li><li>PCA + Isolation Forest</li>
+      <li>LOF</li><li>Autoencoder</li><li>MPAT &amp; GDBN</li><li>Batch RMA analysis</li>
+    </ul>
+    <video controls preload="metadata" playsinline poster="videos/poster_ecid.jpg">
+      <source src="videos/ECID_Outlier_Analyzer_Promo_EN.mp4" type="video/mp4">
+      Your browser cannot play this video. <a href="videos/ECID_Outlier_Analyzer_Promo_EN.mp4">Download the MP4</a>.
+    </video>
+    <div class="meta">
+      <a href="videos/ECID_Outlier_Analyzer_Promo_EN.mp4" download>Download MP4</a>
+      <a href="videos/ECID_Outlier_Analyzer_Promo_EN.srt" download>Subtitles (SRT)</a>
+      <span>English narration · captions burned in</span>
+    </div>
+  </section>
+
+  <footer>© 2026 Masa Tu. Videos show simulated demonstration data only.</footer>
+</main>
+</body>
+</html>

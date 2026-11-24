@@ -1,0 +1,244 @@
+1
+00:00:04,150 --> 00:00:08,418
+A part comes back from the field. It passed every test at wafer sort.
+
+2
+00:00:08,438 --> 00:00:09,162
+So what went wrong?
+
+3
+00:00:10,026 --> 00:00:13,706
+Very often, the answer is already hidden in the test data,
+
+4
+00:00:13,726 --> 00:00:14,651
+if you know where to look.
+
+5
+00:00:16,614 --> 00:00:20,019
+ECID Outlier Analyzer takes a single device ID,
+
+6
+00:00:20,039 --> 00:00:23,714
+and examines it against the full population from every statistical
+
+7
+00:00:23,726 --> 00:00:24,077
+angle.
+
+8
+00:00:24,938 --> 00:00:29,068
+Load native STDF, Spotfire, or SBDF data,
+
+9
+00:00:29,088 --> 00:00:32,626
+enter the target ECID, and set the threshold for each engine.
+
+10
+00:00:33,478 --> 00:00:35,828
+Every detection engine is then one click away.
+
+11
+00:00:37,810 --> 00:00:40,315
+Classical statistics, spatial neighbors,
+
+12
+00:00:40,335 --> 00:00:43,860
+machine learning, and deep learning all run on the same target,
+
+13
+00:00:44,718 --> 00:00:46,780
+so a latent defect has nowhere to hide.
+
+14
+00:00:48,774 --> 00:00:53,324
+Start with standby current, IDDQ. The target die is well inside the
+
+15
+00:00:53,337 --> 00:00:56,324
+specification limits, so a normal test passes it.
+
+16
+00:00:57,194 --> 00:01:01,012
+But against the population, it sits seven point four sigma high,
+
+17
+00:01:01,032 --> 00:01:02,619
+and the univariate check flags it.
+
+18
+00:01:03,466 --> 00:01:07,566
+Regression goes further. Threshold voltage and drive current are tightly
+
+19
+00:01:07,578 --> 00:01:10,821
+correlated. Each value alone looks normal,
+
+20
+00:01:10,841 --> 00:01:12,971
+but together they break the relationship,
+
+21
+00:01:12,991 --> 00:01:14,791
+and the die stands far off the line.
+
+22
+00:01:16,774 --> 00:01:20,562
+Nearest-neighbor residual analysis predicts each value from the eight
+
+23
+00:01:20,574 --> 00:01:21,399
+dies around it.
+
+24
+00:01:22,242 --> 00:01:26,160
+Ring-oscillator frequency rises from the wafer center to the edge,
+
+25
+00:01:26,179 --> 00:01:29,192
+so against the whole wafer, the target looks ordinary.
+
+26
+00:01:30,038 --> 00:01:33,718
+Against its own neighbors, it runs eight megahertz fast:
+
+27
+00:01:33,738 --> 00:01:36,188
+a five point seven sigma spatial outlier.
+
+28
+00:01:38,224 --> 00:01:42,362
+For multivariate patterns, four machine-learning engines score every die
+
+29
+00:01:42,374 --> 00:01:43,037
+on the wafer.
+
+30
+00:01:43,906 --> 00:01:47,562
+PCA with Isolation Forest, spatial-aware ML,
+
+31
+00:01:47,581 --> 00:01:51,774
+local outlier factor, and a TensorFlow autoencoder all agree:
+
+32
+00:01:51,794 --> 00:01:55,569
+the target ranks number one, out of four hundred forty-one dies.
+
+33
+00:01:56,418 --> 00:01:59,298
+Each report lists the top contributing tests,
+
+34
+00:01:59,318 --> 00:02:01,168
+pointing straight to the root cause.
+
+35
+00:02:03,150 --> 00:02:05,880
+Automotive screening adds two more views.
+
+36
+00:02:05,900 --> 00:02:10,518
+MPAT measures the Mahalanobis distance across all tests at once,
+
+37
+00:02:10,538 --> 00:02:13,450
+and the target lies far outside the correlation ellipse.
+
+38
+00:02:14,306 --> 00:02:17,073
+It scores a D-squared above twelve hundred:
+
+39
+00:02:17,093 --> 00:02:20,218
+a tier-two physics maverick, driven by IDDQ.
+
+40
+00:02:21,070 --> 00:02:24,737
+GDBN flags good dies surrounded by failures,
+
+41
+00:02:24,758 --> 00:02:28,508
+and every die on the wafer receives a composite automotive risk tier.
+
+42
+00:02:30,490 --> 00:02:33,382
+Interactive viewers complete the investigation:
+
+43
+00:02:33,402 --> 00:02:35,932
+wafer maps that highlight the target die,
+
+44
+00:02:35,953 --> 00:02:38,003
+with hover lookup on every point,
+
+45
+00:02:38,862 --> 00:02:41,967
+and a test summary report with loss, Cpk,
+
+46
+00:02:41,987 --> 00:02:45,792
+and distribution shape for every test, beside its CDF,
+
+47
+00:02:45,812 --> 00:02:47,450
+wafer map, and run chart.
+
+48
+00:02:49,422 --> 00:02:53,498
+When a whole list of returns arrives, batch mode runs every selected
+
+49
+00:02:53,510 --> 00:02:56,435
+engine on each die, and writes a single summary.
+
+50
+00:02:57,278 --> 00:03:00,083
+In seconds, it shows which dies were flagged,
+
+51
+00:03:00,103 --> 00:03:01,878
+by how many engines, and why.
+
+52
+00:03:03,842 --> 00:03:07,134
+Every engine is validated on mock wafers with known,
+
+53
+00:03:07,154 --> 00:03:11,317
+planted anomalies, backed by an automated suite of eighty tests.
+
+54
+00:03:12,241 --> 00:03:14,946
+Fixed random seeds keep results reproducible,
+
+55
+00:03:14,966 --> 00:03:17,904
+and every run leaves a CSV report and a log.
+
+56
+00:03:19,895 --> 00:03:23,100
+The result: faster answers for every return,
+
+57
+00:03:23,120 --> 00:03:25,557
+visibility beyond single-test limits,
+
+58
+00:03:26,406 --> 00:03:30,231
+evidence you can share, and the scale to go from one die to an entire
+
+59
+00:03:30,244 --> 00:03:31,056
+return list.
+
+60
+00:03:33,018 --> 00:03:35,823
+ECID Outlier Analyzer. Find the outlier,
+
+61
+00:03:35,843 --> 00:03:37,106
+and prove the root cause.
+
