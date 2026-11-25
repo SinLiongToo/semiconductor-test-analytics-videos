@@ -12,3 +12,5 @@ MIT Professional Education, *No Code AI and Machine Learning: Building Data Scie
 
 English narration with burned-in captions; separate `.srt` subtitle files are in [`videos/`](videos/).
 All screens show each tool's built-in simulated demo data.
+
+Certificate: [MIT Professional Education, No Code AI and Machine Learning (PDF)](certificate/MIT_No_Code_AI_ML_Certificate.pdf)
