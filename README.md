@@ -1,7 +1,7 @@
 # Semiconductor Test Analytics Videos
 
-Product walkthrough videos for two semiconductor test-data tools by **Masa Tu**
-(MIT Professional Education, *No Code AI and Machine Learning: Building Data Science Solutions*, 2026).
+Product walkthrough videos for two semiconductor test-data tools by **Masa Tu** (Too Sin-liong).
+MIT Professional Education, *No Code AI and Machine Learning: Building Data Science Solutions*, 2026.
 
 **Watch online:** https://sinliongtoo.github.io/semiconductor-test-analytics-videos/
 
